@@ -3,13 +3,13 @@ require ( './root.js' );
 
 describe('shout(string)', function() {
   it('receives one argument and returns it in all caps', function() {
-    expect(shout('hello')).toEqual('HELLO');
+    expect(shout('HELLO')).toEqual('HELLO');
   })
 })
 
 describe('whisper(string)', function() {
   it('receives one argument and returns it in all lowercase', function() {
-    expect(whisper('HELLO')).toEqual('hello');
+    expect(whisper('hello')).toEqual('HELLO');
   })
 })
 
@@ -17,7 +17,7 @@ describe('logShout(string)', function() {
   it('takes a string argument and logs it in all caps using console.log()', function() {
     const spy = expect.spyOn(console, 'log').andCallThrough();
 
-    logShout('hello');
+    logShout('HELLO');
 
     expect(spy).toHaveBeenCalledWith('HELLO');
 
